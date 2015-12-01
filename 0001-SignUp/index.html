@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Log In</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
+    <style>
+     /* Base styles */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-image: url('bg.jpg');
+        background-size: cover;
+        color: #333333;
+        font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
+        font-size: 1rem;
+      }
+
+      /* Utility classes */
+      .hidden {
+        display: none !important;
+      }
+
+      /* BEM classes */
+      .login-panel {
+        margin: auto;
+        width: 500px;
+
+        background-color: hsla(360, 100%, 100%, 0.3);
+        border-radius: 5px;
+      }
+
+      .login-panel__body {
+        clear: both;
+        padding: 20px;
+      }
+
+      .login-panel__tabs__button {
+        float: left;
+        height: 40px;
+        width: 50%;
+
+        background: none;
+        border: 1px solid hsla(360, 100%, 100%, 0.5);
+      }
+
+      .title {
+        margin-top: 100px;
+
+        font-family: 'Shadows Into Light';
+        font-size: 7rem;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Travstr</h1>
+
+    <div class="login-panel">
+      <div class="login-panel__tabs">
+        <button class="login-panel__tabs__button" id="login-tab">Log In</button>
+        <button class="login-panel__tabs__button" id="signup-tab">Sign Up</button>
+      </div>
+
+      <div class="login-panel__body">
+
+        <form class="login-panel__login-form" id="login-form">
+          <p>
+            <label>
+              email
+              <input class="login-panel__input" type="email" placeholder="email" required/>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              password
+              <input class="login-panel__input" type="password" placeholder="password" required/>
+            </label>
+          </p>
+
+          <input type="submit" value="Log In"/>
+        </form>
+
+        <form class="login-panel__signup-form hidden" id="signup-form">
+
+          <p>
+            <label>
+              email
+              <input class="login-panel__input" type="email" placeholder="email" required/>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              password
+              <input class="login-panel__input" type="password" placeholder="password" required/>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              retype password
+              <input class="login-panel__input" type="password" placeholder="password" required/>
+            </label>
+          </p>
+
+          <input type="submit" value="Sign Up"
+        </form>
+      </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var $loginTab = $('#login-tab');
+        var $signupTab = $('#signup-tab');
+        var $loginForm = $('#login-form');
+        var $signupForm = $('#signup-form');
+
+        $loginTab.click(function() {
+          $signupTab.removeClass('active');
+          $loginTab.addClass('active');
+          $loginForm.removeClass('hidden');
+          $signupForm.addClass('hidden');
+        });
+
+        $signupTab.click(function() {
+          $loginTab.removeClass('active');
+          $signupTab.addClass('active');
+          $signupForm.removeClass('hidden');
+          $loginForm.addClass('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
