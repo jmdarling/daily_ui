@@ -4,7 +4,10 @@
     <title>Log In</title>
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'/>
+
+    <!-- Styles -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' rel='stylesheet' type='text/css'/>
 
     <style>
      /* Base styles */
@@ -27,7 +30,7 @@
 
       /* BEM classes */
       .login-panel {
-        margin: auto;
+        margin: 60px auto 0 auto;
         width: 500px;
 
         background-color: hsla(360, 100%, 100%, 0.3);
@@ -45,7 +48,34 @@
         width: 50%;
 
         background: none;
-        border: 1px solid hsla(360, 100%, 100%, 0.5);
+        background-color: hsla(360, 100%, 100%, 0.3);
+        border: none;
+        border-bottom: 1px solid hsla(360, 100%, 100%, 0.5);
+        font-size: 1rem;
+      }
+
+      .login-panel__tabs__button:hover {
+        cursor: pointer;
+      }
+
+      .login-panel__tabs__button:first-child {
+        border-top-left-radius: 5px;
+      }
+
+      .login-panel__tabs__button:not(:first-child) {
+        border-left: 1px solid hsla(360, 100%, 100%, 0.5);
+      }
+
+      .login-panel__tabs__button:last-child {
+        border-top-right-radius: 5px;
+      }
+
+      .login-panel__tabs__button:not(:last-child) {
+        border-right: 1px solid hsla(360, 100%, 100%, 0.5);
+      }
+
+      .login-panel__tabs__button.active {
+        background-color: hsla(360, 100%, 100%, 0.5);
       }
 
       .title {
@@ -59,11 +89,11 @@
     </style>
   </head>
   <body>
-    <h1 class="title">Travstr</h1>
+    <h1 class="title">Travlr</h1>
 
     <div class="login-panel">
       <div class="login-panel__tabs">
-        <button class="login-panel__tabs__button" id="login-tab">Log In</button>
+        <button class="login-panel__tabs__button active" id="login-tab">Log In</button>
         <button class="login-panel__tabs__button" id="signup-tab">Sign Up</button>
       </div>
 
