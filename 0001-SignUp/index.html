@@ -42,6 +42,27 @@
         padding: 20px;
       }
 
+      .login-panel__input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid hsla(360, 100%, 100%, 0.5);
+        font-size: 1.1rem;
+        padding: 5px;
+        width: 100%;
+      }
+
+      .login-panel__label {
+        /* Only visible to screen readers */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+      }
+
       .login-panel__tabs__button {
         float: left;
         height: 40px;
@@ -78,6 +99,17 @@
         background-color: hsla(360, 100%, 100%, 0.5);
       }
 
+      .login-panel__submit {
+          background: none;
+          border: none;
+          font-size: 1.1rem;
+          width: 100%;
+      }
+
+      .login-panel__submit:hover {
+        cursor: pointer;
+      }
+
       .title {
         margin-top: 100px;
 
@@ -101,46 +133,36 @@
 
         <form class="login-panel__login-form" id="login-form">
           <p>
-            <label>
-              email
-              <input class="login-panel__input" type="email" placeholder="email" required/>
-            </label>
+            <label class="login-panel__label" for="input-email">email</label>
+            <input class="login-panel__input" id="input-login-email" type="email" placeholder="email" required/>
           </p>
 
           <p>
-            <label>
-              password
-              <input class="login-panel__input" type="password" placeholder="password" required/>
-            </label>
+            <label class="login-panel__label" for="input-password">password</label>
+            <input class="login-panel__input" id="input-login-password" type="password" placeholder="password" required/>
           </p>
 
-          <input type="submit" value="Log In"/>
+          <input class="login-panel__submit" type="submit" value="Log In"/>
         </form>
 
         <form class="login-panel__signup-form hidden" id="signup-form">
 
           <p>
-            <label>
-              email
-              <input class="login-panel__input" type="email" placeholder="email" required/>
-            </label>
+            <label class="login-panel__label" for="input-signup-email">email</label>
+            <input class="login-panel__input" id="input-signup-email" type="email" placeholder="email" required/>
           </p>
 
           <p>
-            <label>
-              password
-              <input class="login-panel__input" type="password" placeholder="password" required/>
-            </label>
+            <label class="login-panel__label" for="input-signup-password">password</label>
+            <input class="login-panel__input" id="input-signup-password" type="password" placeholder="password" required/>
           </p>
 
           <p>
-            <label>
-              retype password
-              <input class="login-panel__input" type="password" placeholder="password" required/>
-            </label>
+            <label class="login-panel__label" for="input-signup-confirm-password">retype password</label>
+            <input class="login-panel__input" id="input-signup-confirm-password" type="password" placeholder="retype password" required/>
           </p>
 
-          <input type="submit" value="Sign Up"
+          <input class="login-panel__submit" type="submit" value="Sign Up"
         </form>
       </div>
 
