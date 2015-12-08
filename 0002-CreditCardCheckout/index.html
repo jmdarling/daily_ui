@@ -22,9 +22,43 @@
     </style>
   </head>
   <body>
-    <nav class="navbar"></nav>
-    <div class="container"></div>
-    <div class="checkout-form"></div>
-    <div class="order-summary"></div>
+    <nav class="navbar">
+      <span class="navbar__brand">Company</span>
+    </nav>
+    <div class="container">
+      <form class="checkout-form">
+        <label>
+          Credit Card <input id="credit-card" type="text"/>
+        </label>
+        <label>
+          Name on Card <input id="cardholder-name" type="text"/>
+        </label>
+        <label>
+          Expiration Date <input id="expiration-date" type="date"/>
+        </label>
+        <label>
+          CSV / Security Code <input id="security-code" type="text"/>
+        </label>
+
+        <input id="checkout-form__submit" type="submit" value="Confirm Order"/>
+      </form>
+      <div class="order-summary">
+        <ul class="order-summary__items">
+          <li>
+            <span class="order-summary__items__item-name">Hip Socks</span><span class="order-summary__items__item-price">$10.00</span>
+          </li>
+          <li>
+            <span class="order-summary__items__item-name">Cool Umbrella</span><span class="order-summary__items__item-price">$23.99</span>
+          </li>
+          <li>
+            <span class="order-summary__items__item-name">Record Player</span><span class="order-summary__items__item-price">$219.99</span>
+          </li>
+        </ul>
+
+        <p class="order-summary__total">
+          Total: $253.98
+        </p>
+      </div>
+    </div>
   </body>
 </html>
