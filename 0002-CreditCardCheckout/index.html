@@ -14,6 +14,16 @@
         box-sizing: border-box;
       }
 
+      .checkout-form {
+        float: left;
+        width: 50%;
+      }
+
+      .order-summary {
+        float: left;
+        width: 50%;
+      }
+
       html {
         color: #333333;
         font-family: "Helvetica Neue" Helvetica Arial sans-serif;
@@ -27,18 +37,29 @@
     </nav>
     <div class="container">
       <form class="checkout-form">
-        <label>
-          Credit Card <input id="credit-card" type="text"/>
-        </label>
-        <label>
-          Name on Card <input id="cardholder-name" type="text"/>
-        </label>
-        <label>
-          Expiration Date <input id="expiration-date" type="date"/>
-        </label>
-        <label>
-          CSV / Security Code <input id="security-code" type="text"/>
-        </label>
+        <div class="checkout-form__form-group">
+          <label>
+            Credit Card <input id="credit-card" type="text"/>
+          </label>
+        </div>
+
+        <div class="checkout-form__form-group">
+          <label>
+            Name on Card <input id="cardholder-name" type="text"/>
+          </label>
+        </div>
+
+        <div class="checkout-form__form-group">
+          <label>
+            Expiration Date <input id="expiration-date" type="date"/>
+          </label>
+        </div>
+
+        <div class="checkout-form__form-group">
+          <label>
+            CSV / Security Code <input id="security-code" type="text"/>
+          </label>
+        </div>
 
         <input id="checkout-form__submit" type="submit" value="Confirm Order"/>
       </form>
