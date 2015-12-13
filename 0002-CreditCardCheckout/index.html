@@ -16,6 +16,8 @@
       }
 
       .checkout-form {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .order-summary {
@@ -36,7 +38,7 @@
       }
 
       @media (min-width: 800px) {
-        .checkout-form {
+        #checkout {
           float: left;
           width: 70%;
         }
@@ -78,33 +80,36 @@
         </p>
       </div>
 
-      <form class="checkout-form">
-        <div class="checkout-form__form-group">
-          <label>
-            Credit Card <input id="credit-card" type="text"/>
-          </label>
-        </div>
+      <section id="checkout">
+        <form class="checkout-form">
+          <div class="checkout-form__form-group">
+            <label>
+              Credit Card <input id="credit-card" type="text"/>
+            </label>
+          </div>
 
-        <div class="checkout-form__form-group">
-          <label>
-            Name on Card <input id="cardholder-name" type="text"/>
-          </label>
-        </div>
+          <div class="checkout-form__form-group">
+            <label>
+              Name on Card <input id="cardholder-name" type="text"/>
+            </label>
+          </div>
 
-        <div class="checkout-form__form-group">
-          <label>
-            Expiration Date <input id="expiration-date" type="date"/>
-          </label>
-        </div>
+          <div class="checkout-form__form-group">
+            <label>
+              Expiration Date <input id="expiration-date" type="date"/>
+            </label>
+          </div>
 
-        <div class="checkout-form__form-group">
-          <label>
-            CSV / Security Code <input id="security-code" type="text"/>
-          </label>
-        </div>
+          <div class="checkout-form__form-group">
+            <label>
+              CSV / Security Code <input id="security-code" type="text"/>
+            </label>
+          </div>
 
-        <input id="checkout-form__submit" type="submit" value="Confirm Order"/>
-      </form>
+          <input id="checkout-form__submit" type="submit" value="Confirm Order"/>
+        </form>
+      </section>
+
 
     </div>
   </body>
